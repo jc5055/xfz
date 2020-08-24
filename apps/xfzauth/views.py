@@ -56,6 +56,7 @@ def logout_view(request):
 
 
 @require_POST
+@csrf_exempt
 def register(request):
     # 表单的数据校验
     form = RegisterForm(request.POST)
