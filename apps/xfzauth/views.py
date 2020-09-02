@@ -32,7 +32,7 @@ def login_view(request):
         remember = form.cleaned_data.get('remember')
 
         user = authenticate(request, username=telephone, password=password)
-        print('login user :' + user)
+        # print('login user :' + user)
         if user:
             if user.is_active:
                 login(request, user)
